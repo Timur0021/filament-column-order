@@ -16,7 +16,7 @@
     "extra": {
       "laravel": {
         "providers": [
-          "Vendor\\FilamentColumnOrder\\ColumnOrderServiceProvider"
+          "Tima\\FilamentColumnOrder\\ColumnOrderServiceProvider"
         ]
       }
     },
