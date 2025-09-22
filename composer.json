@@ -1,0 +1,34 @@
+{
+    "name": "vendor/filament-column-order",
+    "description": "Reusable Filament widget for saving/reordering table columns",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Vendor\\FilamentColumnOrder\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Timur0021"
+        }
+    ],
+    "extra": {
+      "laravel": {
+        "providers": [
+          "Vendor\\FilamentColumnOrder\\ColumnOrderServiceProvider"
+        ]
+      }
+    },
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "^11.0",
+        "illuminate/database": "^11.0",
+        "filament/support": "^3.3",
+        "filament/forms": "^3.3",
+        "filament/tables": "^3.3",
+        "filament/notifications": "^3.3",
+        "filament/actions": "^3.3",
+        "filament/widgets": "^3.3"
+    }
+}
