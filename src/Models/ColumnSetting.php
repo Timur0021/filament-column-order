@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class ColumnSetting extends Model
 {
-    protected $table = 'column_settings';
+    protected $table = 'setting_columns';
 
     protected $fillable = [
         'key',

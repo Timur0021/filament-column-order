@@ -8,7 +8,7 @@ return new class extends Migration
 {
     public function up(): void
     {
-        Schema::create('column_settings', function (Blueprint $table) {
+        Schema::create('setting_columns', function (Blueprint $table) {
             $table->id();
             $table->string('key');
             $table->json('value');
@@ -18,6 +18,6 @@ return new class extends Migration
 
     public function down(): void
     {
-        Schema::dropIfExists('column_settings');
+        Schema::dropIfExists('setting_columns');
     }
 };
