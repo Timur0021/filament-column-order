@@ -1,17 +1,18 @@
 <div>
     <h3 class="font-bold mb-2">Порядок колонок</h3>
 
-    <ul x-data x-init="Sortable.create($refs.list, {
+    <ul x-data
+        x-init="Sortable.create($refs.list, {
             animation: 150,
             handle: '.cursor-move',
             onEnd: function () {
                 let order = Array.from($refs.list.children).map(el => el.dataset.key);
-                @this.set('order', order);
+                @this.call('updatedOrder', order);
             }
         })"
         x-ref="list"
-        class="space-y-2 border p-3 rounded bg-gray-50">
-
+        class="space-y-2 border p-3 rounded bg-gray-50"
+    >
         @foreach($order as $item)
             <li data-key="{{ $item }}"
                 class="p-2 bg-white border rounded shadow cursor-move flex justify-between items-center">
