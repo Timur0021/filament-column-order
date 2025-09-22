@@ -1,6 +1,6 @@
 <?php
 
-namespace Vendor\FilamentColumnOrder\Models;
+namespace Tima\FilamentColumnOrder\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

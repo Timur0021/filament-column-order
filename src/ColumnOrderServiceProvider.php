@@ -1,6 +1,6 @@
 <?php
 
-namespace Vendor\FilamentColumnOrder;
+namespace Tima\FilamentColumnOrder;
 
 use Illuminate\Support\ServiceProvider;
 

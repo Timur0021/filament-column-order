@@ -1,8 +1,8 @@
 <?php
 
-namespace Vendor\FilamentColumnOrder\Widgets;
+namespace Tima\FilamentColumnOrder\Widgets;
 
-use Vendor\FilamentColumnOrder\Models\ColumnSetting;
+use Tima\FilamentColumnOrder\Models\ColumnSetting;
 use Filament\Widgets\Widget;
 
 class ColumnsOrderWidget extends Widget
