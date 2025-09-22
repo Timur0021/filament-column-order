@@ -6,7 +6,7 @@
             handle: '.cursor-move',
             onEnd: function () {
                 let order = Array.from($refs.list.children).map(el => el.dataset.key);
-                @this.call('updatedColumnsOrder', order);
+                @this.set('order', order);
             }
         })"
         x-ref="list"
