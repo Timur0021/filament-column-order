@@ -32,8 +32,16 @@ class ColumnsOrderWidget extends Widget
             )->value ?? array_keys($this->labels);
     }
 
-    public function updatedOrder(array $value): void
+    public function updatedOrder(array|string $value): void
     {
+        if (is_string($value)) {
+            $value = json_decode($value, true);
+        }
+
+        if (!is_array($value)) {
+            $value = array_keys($this->labels);
+        }
+
         $this->order = $value;
 
         ColumnSetting::query()
