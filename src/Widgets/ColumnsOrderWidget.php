@@ -31,4 +31,15 @@ class ColumnsOrderWidget extends Widget
                 ['value' => array_keys($this->labels)]
             )->value ?? array_keys($this->labels);
     }
+
+    public function updatedOrder(array $value): void
+    {
+        $this->order = $value;
+
+        ColumnSetting::query()
+            ->updateOrCreate(
+                ['key' => $this->key],
+                ['value' => $this->order]
+            );
+    }
 }
