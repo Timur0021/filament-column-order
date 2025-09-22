@@ -1,5 +1,5 @@
 {
-    "name": "vendor/filament-column-order",
+    "name": "tima/filament-column-order",
     "description": "Reusable Filament widget for saving/reordering table columns",
     "type": "library",
     "license": "MIT",
