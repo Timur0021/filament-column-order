@@ -7,7 +7,7 @@ use Filament\Widgets\Widget;
 
 class ColumnsOrderWidget extends Widget
 {
-    protected static string $view = 'columns-order-widget';
+    protected static string $view = 'filament-column-order::widgets.columns-order-widget';
 
     public array $order = [];
 
