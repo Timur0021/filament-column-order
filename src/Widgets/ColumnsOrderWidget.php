@@ -51,15 +51,20 @@ class ColumnsOrderWidget extends Widget
             );
     }
 
-    /**
-     * @param array $allColumns
-     * @return array
-     */
-    public function getSortedColumns(array $allColumns): array
+    public static function sortColumns(array $order, array $allColumns): array
     {
-        return collect($this->order)
+        return collect($order)
             ->map(fn($key) => $allColumns[$key] ?? null)
             ->filter()
             ->toArray();
+    }
+
+    public static function getOrder(string $key, array $defaultLabels): array
+    {
+        return ColumnSetting::query()
+            ->firstOrCreate(
+                ['key' => $key],
+                ['value' => array_keys($defaultLabels)]
+            )->value ?? array_keys($defaultLabels);
     }
 }
