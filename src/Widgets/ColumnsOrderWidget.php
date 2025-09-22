@@ -50,4 +50,16 @@ class ColumnsOrderWidget extends Widget
                 ['value' => $this->order]
             );
     }
+
+    /**
+     * @param array $allColumns
+     * @return array
+     */
+    public function getSortedColumns(array $allColumns): array
+    {
+        return collect($this->order)
+            ->map(fn($key) => $allColumns[$key] ?? null)
+            ->filter()
+            ->toArray();
+    }
 }
